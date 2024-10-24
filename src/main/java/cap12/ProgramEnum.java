@@ -1,7 +1,7 @@
 package cap12;
 
 import entities.Order;
-import entitiesenums.OrderStatus;
+import entities.enums.OrderStatus;
 
 import java.util.Date;
 import java.util.Scanner;
