@@ -39,6 +39,6 @@ public class Accountcap13 {
     }
 
     public void withdraw(double amount){
-        balance -= amount;
+        balance -= amount + 5.0;
     }
 }

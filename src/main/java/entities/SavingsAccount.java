@@ -22,4 +22,9 @@ public class SavingsAccount extends Accountcap13 {
     public void updateBalance(){
         balance += balance * interestRating;
     }
+
+    @Override
+    public void withdraw(double amount){
+        balance -= amount;
+    }
 }
