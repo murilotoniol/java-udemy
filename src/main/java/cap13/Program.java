@@ -33,6 +33,7 @@ public class Program {
          acc5.updateBalance();
          System.out.println("Updated!");
         }*/
+
         Accountcap13 acc1 = new Accountcap13(1001, "Alex", 1000.0);
         acc1.withdraw(200.0);
         System.out.println(acc1.getBalance());
@@ -40,5 +41,9 @@ public class Program {
         Accountcap13 acc2 = new SavingsAccount(1002, "Murilo", 1000.0, 5000.0);
         acc2.withdraw(200.0);
         System.out.println(acc2.getBalance());
+
+        Accountcap13 acc3 = new BusinessAccount(1003, "Murilo", 1000.0, 5000.0);
+        acc3.withdraw(200.0);
+        System.out.println(acc3.getBalance());
     }
 }
