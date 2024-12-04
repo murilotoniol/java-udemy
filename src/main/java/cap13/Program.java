@@ -1,6 +1,7 @@
 package cap13;
 
 import entities.*;
+import entities.enums.Color;
 
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class Program {
          */
 
         // AULA 135
+        /*
         List<EmployeeCap13> list = new ArrayList<>();
 
         System.out.print("Enter the number of employees: ");
@@ -85,5 +87,38 @@ public class Program {
         for (EmployeeCap13 emp : list){
             System.out.println(emp.getName() + " $" + emp.payment());
         }
+        */
+
+        // AULA 136
+        List<Shape> list = new ArrayList<>();
+
+        System.out.print("Enter the number of shapes: ");
+        int n = sc.nextInt();
+
+        for (int i=1; i<=n; i++){
+            System.out.println("Shape #"+i+" data:");
+            System.out.print("Rectangle or Circle (r/c)? ");
+            char ch = sc.next().charAt(0);
+            System.out.print("Color (BLACK/BLUE/RED): ");
+            Color color = Color.valueOf(sc.next());
+            if (ch == 'r'){
+                System.out.print("Width: ");
+                double width = sc.nextDouble();
+                System.out.print("Height: ");
+                double height = sc.nextDouble();
+                list.add(new Rectangle(color, height, width));
+            }else{
+                System.out.print("Radius: ");
+                double radius = sc.nextDouble();
+                list.add(new Circle(color, radius));
+            }
+        }
+
+        System.out.println("SHAPES AREAS:");
+        for (Shape shape : list){
+            System.out.println(String.format("%.2f", shape.area()));
+        }
+
+        sc.close();
     }
 }
