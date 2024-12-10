@@ -90,6 +90,7 @@ public class Program {
         */
 
         // AULA 136
+        /*
         List<Shape> list = new ArrayList<>();
 
         System.out.print("Enter the number of shapes: ");
@@ -118,7 +119,7 @@ public class Program {
         for (Shape shape : list){
             System.out.println(String.format("%.2f", shape.area()));
         }
-
+        */
         sc.close();
     }
 }
